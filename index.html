@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Academic Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-icon">✦</span><span>Campus<span class="brand-light">Hub</span></span></div>
+      <div class="profile-mini">
+        <div class="avatar">MG</div>
+        <div><strong>Gopinath</strong><small>Student · AIML</small></div>
+      </div>
+      <nav>
+        <a class="nav-link active" href="#overview" data-page="overview"><span>▦</span> Overview</a>
+        <a class="nav-link" href="#courses" data-page="courses"><span>▤</span> My Courses</a>
+        <a class="nav-link" href="#attendance" data-page="attendance"><span>◷</span> Attendance</a>
+        <a class="nav-link" href="#assignments" data-page="assignments"><span>☑</span> Assignments</a>
+        <a class="nav-link" href="#results" data-page="results"><span>▥</span> Exam Results</a>
+        <a class="nav-link" href="#timetable" data-page="timetable"><span>▦</span> Timetable</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span>✧</span><strong>Need help?</strong><p>Contact your class mentor for academic support.</p><a href="mailto:mentor@example.com">Contact mentor →</a></div>
+        <small>© 2026 CampusHub</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div><span class="eyebrow">STUDENT PORTAL</span><h1 id="pageTitle">Overview</h1></div>
+        <div class="top-actions"><span class="date-chip" id="today"></span><button class="bell" title="Notifications">♧<i></i></button><div class="avatar small">MG</div></div>
+      </header>
+
+      <section class="page active-page" id="overview">
+        <div class="welcome">
+          <div><p class="eyebrow">FRIDAY, NOVEMBER 27, 2026</p><h2>Welcome back, Gopinath! <span>👋</span></h2><p>Here’s what’s happening with your academics today.</p></div>
+          <div class="welcome-art">🎓</div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Overall Attendance</span><span class="stat-icon purple">◷</span></div><strong>86.5%</strong><div class="progress"><span style="width:86.5%"></span></div><small class="positive">Good standing</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Enrolled Courses</span><span class="stat-icon blue">▤</span></div><strong>6</strong><small>Current semester</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Pending Assignments</span><span class="stat-icon orange">☑</span></div><strong id="pendingCount">3</strong><small>Complete before due date</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Current CGPA</span><span class="stat-icon green">★</span></div><strong>8.4</strong><small class="positive">Great progress</small></article>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel">
+            <div class="panel-heading"><div><h3>Upcoming assignments</h3><p>Keep track of your academic tasks</p></div><a href="#assignments" data-page="assignments">View all →</a></div>
+            <div class="task-list" id="dashboardTasks">
+              <div class="task-row"><div class="task-symbol purple-bg">▣</div><div class="task-info"><strong>Engineering Mathematics</strong><small>Unit 3 – Problem set</small></div><span class="due urgent">Due Nov 29</span></div>
+              <div class="task-row"><div class="task-symbol blue-bg">⌘</div><div class="task-info"><strong>Programming in C</strong><small>Array operations</small></div><span class="due">Due Dec 02</span></div>
+              <div class="task-row"><div class="task-symbol orange-bg">✎</div><div class="task-info"><strong>Communication Skills</strong><small>Reading comprehension</small></div><span class="due">Due Dec 04</span></div>
+            </div>
+          </article>
+          <article class="panel announcement">
+            <div class="panel-heading"><div><h3>Announcements</h3><p>Updates from your college</p></div><span class="new-tag">NEW</span></div>
+            <div class="notice"><span class="notice-dot"></span><div><strong>Internal assessment</strong><p>Check the department notice board for the updated schedule.</p><small>Today · Academic office</small></div></div>
+            <div class="notice"><span class="notice-dot blue-dot"></span><div><strong>Library reminder</strong><p>Please return borrowed books before the due date.</p><small>Yesterday · Library</small></div></div>
+          </article>
+        </div>
+        <article class="panel quick-panel"><div class="panel-heading"><div><h3>Quick overview</h3><p>Your semester at a glance</p></div></div><div class="quick-grid"><div><span class="quick-icon">📚</span><strong>6 Subjects</strong><small>Active courses</small></div><div><span class="quick-icon">📝</span><strong>12 Tasks</strong><small>Assigned this term</small></div><div><span class="quick-icon">🏅</span><strong>8.4 CGPA</strong><small>Current performance</small></div><div><span class="quick-icon">📅</span><strong>Semester 1</strong><small>Academic year 2026–27</small></div></div></article>
+      </section>
+
+      <section class="page" id="courses"><article class="panel"><div class="panel-heading"><div><h3>My Courses</h3><p>Subjects enrolled in this semester</p></div></div><div class="course-grid">
+        <div class="course-card"><span class="course-badge purple-bg">M</span><h3>Engineering Mathematics</h3><p>Dr. Priya · 4 credits</p><div class="course-meta"><span>Progress</span><b>72%</b></div><div class="progress"><span style="width:72%"></span></div></div>
+        <div class="course-card"><span class="course-badge blue-bg">C</span><h3>Programming in C</h3><p>Mr. Kumar · 4 credits</p><div class="course-meta"><span>Progress</span><b>68%</b></div><div class="progress"><span style="width:68%"></span></div></div>
+        <div class="course-card"><span class="course-badge orange-bg">E</span><h3>Engineering Chemistry</h3><p>Dr. Meena · 3 credits</p><div class="course-meta"><span>Progress</span><b>80%</b></div><div class="progress"><span style="width:80%"></span></div></div>
+        <div class="course-card"><span class="course-badge green-bg">P</span><h3>Engineering Physics</h3><p>Mr. Arun · 3 credits</p><div class="course-meta"><span>Progress</span><b>75%</b></div><div class="progress"><span style="width:75%"></span></div></div>
+        <div class="course-card"><span class="course-badge pink-bg">E</span><h3>Communication Skills</h3><p>Ms. Divya · 2 credits</p><div class="course-meta"><span>Progress</span><b>60%</b></div><div class="progress"><span style="width:60%"></span></div></div>
+        <div class="course-card"><span class="course-badge teal-bg">B</span><h3>Basic Electrical Engineering</h3><p>Mr. Raj · 3 credits</p><div class="course-meta"><span>Progress</span><b>70%</b></div><div class="progress"><span style="width:70%"></span></div></div>
+      </div></article></section>
+
+      <section class="page" id="attendance"><article class="panel"><div class="panel-heading"><div><h3>Attendance summary</h3><p>Subject-wise attendance record (sample data)</p></div></div><div class="table-wrap"><table><thead><tr><th>Subject</th><th>Present</th><th>Total classes</th><th>Attendance</th><th>Status</th></tr></thead><tbody>
+        <tr><td>Engineering Mathematics</td><td>26</td><td>30</td><td>86.7%</td><td><span class="status good">Good</span></td></tr><tr><td>Programming in C</td><td>28</td><td>32</td><td>87.5%</td><td><span class="status good">Good</span></td></tr><tr><td>Engineering Chemistry</td><td>22</td><td>28</td><td>78.6%</td><td><span class="status warning">Watch</span></td></tr><tr><td>Engineering Physics</td><td>25</td><td>29</td><td>86.2%</td><td><span class="status good">Good</span></td></tr><tr><td>Communication Skills</td><td>24</td><td>27</td><td>88.9%</td><td><span class="status good">Good</span></td></tr></tbody></table></div></article></section>
+
+      <section class="page" id="assignments"><article class="panel"><div class="panel-heading"><div><h3>Assignments</h3><p>Mark tasks as completed when you finish them</p></div></div><div class="task-list full-tasks" id="allTasks">
+        <div class="task-row"><div class="task-symbol purple-bg">▣</div><div class="task-info"><strong>Engineering Mathematics</strong><small>Unit 3 – Problem set · Due Nov 29</small></div><button class="complete-btn" onclick="completeTask(this)">Mark complete</button></div>
+        <div class="task-row"><div class="task-symbol blue-bg">⌘</div><div class="task-info"><strong>Programming in C</strong><small>Array operations · Due Dec 02</small></div><button class="complete-btn" onclick="completeTask(this)">Mark complete</button></div>
+        <div class="task-row"><div class="task-symbol orange-bg">✎</div><div class="task-info"><strong>Communication Skills</strong><small>Reading comprehension · Due Dec 04</small></div><button class="complete-btn" onclick="completeTask(this)">Mark complete</button></div>
+      </div></article></section>
+
+      <section class="page" id="results"><article class="panel"><div class="panel-heading"><div><h3>Exam Results</h3><p>Internal assessment scores (demo data)</p></div></div><div class="table-wrap"><table><thead><tr><th>Subject</th><th>Test 1</th><th>Test 2</th><th>Maximum</th><th>Grade</th></tr></thead><tbody><tr><td>Engineering Mathematics</td><td>42</td><td>45</td><td>50</td><td>A</td></tr><tr><td>Programming in C</td><td>46</td><td>44</td><td>50</td><td>A+</td></tr><tr><td>Engineering Chemistry</td><td>39</td><td>41</td><td>50</td><td>B+</td></tr><tr><td>Engineering Physics</td><td>43</td><td>42</td><td>50</td><td>A</td></tr></tbody></table></div><p class="disclaimer">Note: All marks shown are sample values for this mini-project.</p></article></section>
+
+      <section class="page" id="timetable"><article class="panel"><div class="panel-heading"><div><h3>Weekly Timetable</h3><p>Example class schedule</p></div></div><div class="table-wrap"><table><thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr></thead><tbody><tr><td>9:00–10:00</td><td>Maths</td><td>Physics</td><td>C Programming</td><td>Maths</td><td>Chemistry</td></tr><tr><td>10:00–11:00</td><td>C Programming</td><td>Maths</td><td>English</td><td>Physics</td><td>C Programming</td></tr><tr><td>11:15–12:15</td><td>Chemistry</td><td>English</td><td>Maths</td><td>Lab</td><td>Physics</td></tr><tr><td>1:00–3:00</td><td>Lab</td><td>Library</td><td>Lab</td><td>Chemistry</td><td>Mentor hour</td></tr></tbody></table></div></article></section>
+      <footer>Student Academic Dashboard · Mini Project · <span>Demo website – replace sample details with your own data.</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
